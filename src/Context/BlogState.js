@@ -3,6 +3,7 @@ import BlogContext from "./BlogContext";
 
 const BlogState = (props) => {
   const host = process.env.REACT_APP_PUBLIC_URL;
+  console.log("host", host);
   const blogInitials = [];
   const [blogs, setBlogs] = useState(blogInitials);
 
