@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import BlogContext from "./BlogContext";
 
 const BlogState = (props) => {
-  const host = "http://localhost:3010/blog";
+  const host = process.env.REACT_APP_PUBLIC_URL;
   const blogInitials = [];
   const [blogs, setBlogs] = useState(blogInitials);
 

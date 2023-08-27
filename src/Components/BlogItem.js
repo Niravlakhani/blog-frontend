@@ -6,9 +6,12 @@ export default function BlogItem(props) {
 
   useEffect(() => {
     if (blog?.image) {
-      fetch(`http://localhost:3010/blog/getResourcesByEntity/${blog?.image}`, {
-        method: "GET",
-      })
+      fetch(
+        `${process.env.REACT_APP_PUBLIC_URL}/getResourcesByEntity/${blog?.image}`,
+        {
+          method: "GET",
+        }
+      )
         .then((data) => setImageUrl(data?.url))
         .catch((err) => console.log("Error fetching image:", err));
     }
